@@ -1,0 +1,24 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>campus</title>
+   <link rel="stylesheet" href="{% static 'styles.css'%}">
+</head>
+<body>
+   <h1>campus List<h1>
+   	<div class="campus">
+   		{% for campus in campus%}
+   		<div class="campus">
+   			<h2><a href="#">{{campus.title}}</a></h2>
+   			<p>{{campus.body}}</p>
+   			<p>{{campus.date}}</p>
+   		</div>
+	
+
+   	   {% endfor %}
+
+
+</body>
+</html>
